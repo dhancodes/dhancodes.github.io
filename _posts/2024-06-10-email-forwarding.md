@@ -23,13 +23,12 @@ of gmail.
 
 Disclaimer: Even though I use Gmail, I am not endorsing it. Unfortunately, Gmail
 uses an unencrypted protocol for communication.
-**Step 1** : Go to settings
-**Step 2** : Click on Forwarding and POP/IMAP
-**Step 3** : Add a forwarding address.
-**Step 4** : Verfiy your account and do the other things
-...
-**Step n** : You have successfully added an email address to forward all your
-mails to.
+* **Step 1** : Go to settings
+* **Step 2** : Click on Forwarding and POP/IMAP
+* **Step 3** : Add a forwarding address.
+* **Step 4** : Verfiy your account and do the other things
+* ...
+* **Step n** : You have successfully added an email address to forward all your mails to.
 
 
 ## Level 2: Send Emails Without Logging into Your Secondary Account
