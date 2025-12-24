@@ -206,7 +206,10 @@ Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should 
 This allows you to denote <var>variables</var>.
 
 ### Button
-New button!! <a href="{{ site.url }}/files/paper1.pdf" style='text-decoration:none;' class="btn btn--download" title="{Download pdf}"><i class="fab fa-download" aria-hidden="true"></i><span>  Download script</span></a>
+New button!! <a href="{{ site.url }}/files/paper1.pdf"
+style='text-decoration:none;' class="btn btn--download" title="{Download
+pdf}"><i class="fab fa-download" aria-hidden="true"></i><span>  Download
+script</span></a>
 
 
 <a href="{{ site.url }}/files/paper1.pdf" style='text-decoration:none;' class="btn btn--pdf" title="{Download pdf}"><i class="fab fa-file-pdf" aria-hidden="true"></i><span>  Download script</span></a>

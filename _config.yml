@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Akshay Dhan"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Akshay Dhan"
 description              : &description "personal description"
