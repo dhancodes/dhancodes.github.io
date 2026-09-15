@@ -1,32 +1,16 @@
 # main links
 main:
-  # - title: "Publications"
-  #   url: /publications/
-
   - title: "Blog"
     url: /posts/
 
-  - title: "Research"
-    url: /Research/
+  # - title: "Research"
+  #   url: /Research/
 
-  - title: "dev"
-    url: /dev/
+  # - title: "dev"
+  #   url: /dev/
 
   - title: "Photos"
     url: /photos/
 
   - title: "Useful Links"
     url: /useful_links/
-
-    #  - title: "Guide"
-    #url: /markdown/
-
-    #         - title: "Teaching"
-    #           url: /teaching/
-    #
-
-    # - title: "Blog Posts"
-    #  url: /year-archive/
-
-        #  - title: "Contact Me"
-        # url: /contactme/
