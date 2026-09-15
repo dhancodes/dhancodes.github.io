@@ -32,12 +32,24 @@
 }
 
 .masthead__menu {
+  display: flex;
+  align-items: center;
 
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+}
+
+.masthead__home {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: $masthead-link-color;
+
+  &:hover {
+    color: $masthead-link-color-hover;
   }
 }
 
@@ -50,8 +62,4 @@
     padding-right: 2em;
     font-weight: 700;
   }
-}
-
-.masthead__menu-spacer {
-  width: 100%;
 }
