@@ -12,6 +12,7 @@
               <span class="sr-only">Home</span>
             </a>
           </li>
+          <li class="masthead__menu-spacer" aria-hidden="true"></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
