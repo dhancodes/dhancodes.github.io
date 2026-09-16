@@ -4,6 +4,7 @@ date: 2022-04-07
 permalink: /posts/2022/04/rss-readers/
 tags:
  - Freedom
+ - rss
 toc: true
 ---
 
