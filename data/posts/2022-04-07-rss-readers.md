@@ -10,7 +10,7 @@ aliases:
 
 In our modern world, the Internet has become an overwhelming sea of information. But have we truly mastered the art of navigating it? While the Internet presents itself differently to each individual, we often find ourselves at the mercy of bloated interfaces and algorithms that dictate what we see. However, there is a time-tested solution that empowers us to take control of our information consumption: Rich Site Summary (RSS), also known as Really Simple Syndication. Let's take a step back in time and explore the power of RSS.
 
-![RSS Logo](https://dhancodes.github.io/images/posts/rsslogo.png "RSS logo")
+![RSS Logo](/images/posts/rsslogo.png "RSS logo")
 
 ## The Savior from the Past: RSS
 You may have noticed the distinctive orange RSS logo on various blogs. This logo represents a button that carries a link, allowing you to copy and save it to an RSS reader. An RSS reader is an application specifically designed to consume these feeds. By setting up an RSS reader, you can stay updated whenever a new post is published on a blog, a newspaper site, a YouTube channel, Reddit, or even your favorite Twitter accounts (although the process for Twitter can be a bit cumbersome). The initial setup may take some time, but the key benefit is that you regain control over the information you receive.

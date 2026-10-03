@@ -12,7 +12,7 @@ bodies. Recently, I made the bold decision to ink a tattoo on my hand—a
 symbolic journey encapsulating the essence of "一期一会" (ichigo ichi-e),
 treasuring each moment as a unique encounter.
 
-![Tattoo](https://dhancodes.github.io/images/posts/tattoo.jpg "My first tattoo")
+![Tattoo](/images/posts/tattoo.jpg "My first tattoo")
 
 ## The Meaning Behind "一期一会":
 "一期一会" embodies treasuring life's fleeting moments. It reminds me to
