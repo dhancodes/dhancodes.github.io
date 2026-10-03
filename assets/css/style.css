@@ -565,3 +565,13 @@ body.s-blog main img {
     padding-left: 0;
     padding-right: 0;
 }
+
+@media (max-width: 48em) {
+    .entries a {
+        text-decoration: none;
+    }
+}
+
+.hero p:first-of-type a {
+    color: inherit;
+}
