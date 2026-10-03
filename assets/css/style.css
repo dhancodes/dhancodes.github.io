@@ -506,9 +506,17 @@ header {
 }
 
 @media (max-width: 48em) {
+    header {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
     nav {
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        gap: 0.8em;
+    }
+
+    #theme-toggle {
+        margin-left: 0;
     }
 
     .searchwrap {
@@ -523,15 +531,25 @@ header {
         display: none;
     }
 
-    header.search-open #search {
+    header.search-open #search,
+    header.search-open #search:focus {
         display: block;
-        order: 99;
-        flex-basis: 100%;
-        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 6;
+        width: auto;
+        margin-top: 0.4em;
+        padding: 0.5em 0.9em;
         box-sizing: border-box;
+        background: var(--bg);
     }
 
-    header.search-open #search:focus {
-        width: 100%;
+    header.search-open #search-results {
+        top: calc(100% + 3em);
+        left: 0;
+        right: 0;
+        width: auto;
     }
 }
