@@ -494,3 +494,44 @@ header {
     padding: 0.6em 0.9em;
     color: var(--meta);
 }
+
+#search-btn {
+    display: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--link);
+    cursor: pointer;
+    line-height: 0;
+}
+
+@media (max-width: 48em) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .searchwrap {
+        display: contents;
+    }
+
+    #search-btn {
+        display: inline-flex;
+    }
+
+    #search {
+        display: none;
+    }
+
+    header.search-open #search {
+        display: block;
+        order: 99;
+        flex-basis: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header.search-open #search:focus {
+        width: 100%;
+    }
+}
