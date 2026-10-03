@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{ .Content }}
+<ul class="postlist">
+{{- range hugo.Data.publications }}
+{{ partial "pubitem.html" . }}
+{{- end }}
+</ul>
+{{ end }}

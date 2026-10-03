@@ -1,0 +1,6 @@
+{{ define "main" }}
+<p class="meta">{{ .Date.Format "2006-01-02" }}
+{{- with .GetTerms "tags" }} &middot; {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}{{ end }}</p>
+{{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
+{{ .Content }}
+{{ end }}

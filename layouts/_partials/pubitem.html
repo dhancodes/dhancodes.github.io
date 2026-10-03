@@ -1,0 +1,14 @@
+{{- $pdf := cond (ne .pdf nil) (printf "papers/%s" .pdf | relURL) "" -}}
+{{- $html := cond (ne .html nil) (printf "papers/%s" .html | relURL) "" -}}
+{{- $link := cond (ne .link nil) (.link | relURL) "" -}}
+{{- $href := or $pdf $html $link -}}
+{{- $parts := slice -}}
+{{- with .venue }}{{ $parts = $parts | append (. | htmlEscape) }}{{ end -}}
+{{- with $pdf }}{{ $parts = $parts | append (printf `<a href="%s">PDF</a>` .) }}{{ end -}}
+{{- with $html }}{{ $parts = $parts | append (printf `<a href="%s">HTML</a>` .) }}{{ end -}}
+{{- with $link }}{{ $parts = $parts | append (printf `<a href="%s">Link</a>` .) }}{{ end -}}
+<li><span>
+{{- if $href }}<a href="{{ $href }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+{{- with .authors }}<br><span class="meta">{{ . }}</span>{{ end }}
+{{- with $parts }}<br><span class="meta">{{ delimit . " &middot; " | safeHTML }}</span>{{ end -}}
+</span>{{ with .year }}<span class="date">{{ . }}</span>{{ end }}</li>

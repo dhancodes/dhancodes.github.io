@@ -1,0 +1,274 @@
+:root {
+    color-scheme: light;
+    --bg: #eeeeea;
+    --fg: #1a1a1a;
+    --accent: #1a1a1a;
+    --border: #a8a8a2;
+    --link: #1a1a1a;
+    --meta: #5a5a56;
+    --code-bg: rgba(0, 0, 0, 0.07);
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #1c1c1a;
+    --fg: #d6d6d0;
+    --accent: #d6d6d0;
+    --border: #4a4a46;
+    --link: #d6d6d0;
+    --meta: #96968f;
+    --code-bg: rgba(255, 255, 255, 0.08);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2.5em;
+    align-items: start;
+    margin: 2.5em 0 3.5em;
+}
+
+.hero > * {
+    grid-column: 2;
+}
+
+.avatar {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    align-self: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    margin: 0 0 0.2em;
+    font-size: 2em;
+    letter-spacing: 0.01em;
+}
+
+.hero p {
+    margin: 0.7em 0;
+    line-height: 1.7;
+}
+
+.hero p:first-of-type {
+    margin-top: 0;
+    color: var(--meta);
+    font-size: 1.05em;
+    font-style: italic;
+}
+
+@media (max-width: 40em) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero > *,
+    .avatar {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .avatar {
+        margin: 0 auto 1em;
+    }
+
+    .hero p:not(:first-of-type) {
+        text-align: left;
+    }
+}
+
+.recent h2 {
+    font-weight: normal;
+}
+
+.postlist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1em;
+}
+
+.postlist li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0.6em 0;
+    border-top: 1px solid var(--border);
+}
+
+.postlist a {
+    text-decoration: none;
+}
+
+.postlist .date {
+    color: var(--meta);
+    white-space: nowrap;
+}
+
+#theme-toggle {
+    margin-left: 0.5em;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--link);
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+header .sitetitle svg {
+    vertical-align: middle;
+}
+
+#theme-toggle .icon-sun,
+:root[data-theme="dark"] #theme-toggle .icon-moon {
+    display: none;
+}
+
+:root[data-theme="dark"] #theme-toggle .icon-sun {
+    display: inline;
+}
+
+body {
+    max-width: 56em;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-family: serif;
+    line-height: 1.5;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+a {
+    color: var(--link);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+header .sitetitle {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.meta {
+    color: var(--meta);
+    font-size: 0.9em;
+}
+
+.entry {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--border);
+}
+
+pre {
+    overflow-x: auto;
+    padding: 0.75em;
+    background: var(--code-bg);
+}
+
+code {
+    font-family: monospace;
+}
+
+footer {
+    margin-top: 4em;
+    padding-top: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--meta);
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 0.8em;
+}
+
+footer .social a {
+    color: var(--meta);
+}
+
+footer p {
+    margin: 1em 0 0;
+}
+
+.pdfview {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid var(--border);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5em;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 1em;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox figcaption {
+    margin-top: 0.75em;
+    color: var(--meta);
+}
+
+.lightbox a {
+    position: absolute;
+    font-size: 2.5em;
+    line-height: 1;
+    text-decoration: none;
+    padding: 0.2em 0.4em;
+}
+
+.lb-close { top: 0.2em; right: 0.2em; }
+.lb-prev { left: 0.1em; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 0.1em; top: 50%; transform: translateY(-50%); }
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}

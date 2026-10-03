@@ -1,0 +1,12 @@
+# One entry per paper, newest first. The home page shows the first 3.
+# Put files in static/papers/ and give just the filename for pdf/html.
+# `link` is any external URL (arXiv, ePrint, DOI).
+# Only title is required; year and venue are optional extras.
+#
+# - title: "Paper title"
+#   authors: "A. Dhan, B. Coauthor"
+#   pdf: "paper.pdf"
+#   html: "paper.html"
+#   link: "https://eprint.iacr.org/2025/123"
+#   venue: "CRYPTO 2025"
+#   year: 2025

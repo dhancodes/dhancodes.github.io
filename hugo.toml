@@ -1,0 +1,71 @@
+baseURL = "https://dhancodes.github.io"
+languageCode = "en"
+title = "Blog"
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = ["html", "rss"]
+
+[services.rss]
+limit = -1
+
+[params.author]
+name = "Akshay Dhan"
+email = "dhancodes@gmail.com"
+github = "dhancodes"
+twitter = "dhanspeaks"
+
+[markup.highlight]
+noClasses = false
+style = "pygments"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [["$$", "$$"], ["\\[", "\\]"]]
+inline = [["$", "$"], ["\\(", "\\)"]]
+
+# Everything you edit lives in data/:
+#   data/posts/*.md        -> /blog/
+#   data/photos.yaml       gallery list; images in data/photos/
+#   data/publications.yaml paper list;   pdf/html in data/papers/ -> /papers/
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+    files = ["/*.yaml"]
+  [[module.mounts]]
+    source = "data/posts"
+    target = "content/blog"
+  [[module.mounts]]
+    source = "data/photos"
+    target = "assets/photos"
+  [[module.mounts]]
+    source = "data/papers"
+    target = "static/papers"
+
+# Posts are named YYYY-MM-DD-title.md: the date comes from the filename and the
+# URL is /blog/title/ (taken from the filename, not the front-matter title).
+[frontmatter]
+  date = [":filename", ":default"]

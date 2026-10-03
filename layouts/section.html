@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{- $seen := dict }}
+{{- range .Pages }}
+{{- $p := . }}
+{{- with index $seen $p.RelPermalink }}{{ errorf "Duplicate post URL %s: %s and %s (change the title part of one filename)" $p.RelPermalink . $p.File.Path }}{{ end }}
+{{- $seen = merge $seen (dict $p.RelPermalink $p.File.Path) }}
+{{- end }}
+{{ range .Pages.GroupByDate "2006" }}
+<h2>{{ .Key }}</h2>
+<ul>
+{{- range .Pages }}
+<li>{{ .Date.Format "2006-01-02" }} &ndash; <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{- end }}
+</ul>
+{{ end }}
+{{ end }}

@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ with hugo.Data.photos }}
+{{- $n := len . }}
+{{- $imgs := slice }}
+{{- range . }}
+{{- $e := . }}
+{{- with resources.Get (printf "photos/%s" $e.file_name) }}
+{{- $imgs = $imgs | append (dict "img" . "title" ($e.title | default $e.file_name)) }}
+{{- else }}
+{{- errorf "photos.yaml: assets/photos/%s not found" $e.file_name }}
+{{- end }}
+{{- end }}
+<div class="gallery">
+{{- range $i, $p := $imgs }}
+{{- $thumb := $p.img.Fill "300x300 q80" }}
+<a href="#p{{ $i }}"><img src="{{ $thumb.RelPermalink }}" width="150" height="150" alt="" loading="lazy"></a>
+{{- end }}
+</div>
+{{- range $i, $p := $imgs }}
+{{- $full := $p.img }}
+{{- if gt $p.img.Width 1600 }}{{ $full = $p.img.Resize "1600x q85" }}{{ end }}
+<figure class="lightbox" id="p{{ $i }}">
+<a class="lb-close" href="#_" aria-label="Close">&times;</a>
+<a class="lb-prev" href="#p{{ mod (add $i (sub $n 1)) $n }}" aria-label="Previous">&lsaquo;</a>
+<a class="lb-next" href="#p{{ mod (add $i 1) $n }}" aria-label="Next">&rsaquo;</a>
+<img src="{{ $full.RelPermalink }}" alt="{{ $p.title }}" loading="lazy">
+<figcaption>{{ $p.title }}</figcaption>
+</figure>
+{{- end }}
+{{ else }}
+<p>No photos yet.</p>
+{{ end }}
+{{ end }}

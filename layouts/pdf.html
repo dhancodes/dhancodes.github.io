@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+{{ with .Resources.GetMatch "*.pdf" }}
+<p><a href="{{ .RelPermalink }}">Download PDF</a></p>
+<object data="{{ .RelPermalink }}" type="application/pdf" class="pdfview">
+<p>This browser can't display PDFs inline. <a href="{{ .RelPermalink }}">Open the PDF</a>.</p>
+</object>
+{{ else }}
+<p>No PDF yet.</p>
+{{ end }}
+{{ end }}
