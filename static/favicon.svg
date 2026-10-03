@@ -1,5 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#14120e"/>
-  <text x="32" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="38"
-        font-weight="bold" fill="#c9a227" text-anchor="middle">A</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.5"
+     inkscape:cx="15.44"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <circle
+     cx="32"
+     cy="32"
+     r="32"
+     fill="#14120e"
+     id="circle1" />
+  <text
+     x="40.190918"
+     y="39.318123"
+     font-family="Georgia, 'Times New Roman', serif"
+     font-size="42.9657px"
+     font-weight="bold"
+     fill="#c9a227"
+     text-anchor="middle"
+     id="text1"
+     transform="scale(0.83513431,1.1974122)"
+     style="stroke-width:1.13068"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Cursor';-inkscape-font-specification:'TeX Gyre Cursor Bold';fill:#ffffff;stroke-width:1.13068"
+       id="tspan1">AD</tspan></text>
 </svg>
