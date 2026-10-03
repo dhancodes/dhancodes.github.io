@@ -196,10 +196,6 @@ body {
     color: var(--fg);
 }
 
-body.s-blog main {
-    max-width: 50em;
-}
-
 a {
     color: var(--link);
 }
