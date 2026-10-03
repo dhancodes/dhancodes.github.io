@@ -1,20 +1,15 @@
 {{ define "main" }}
 <section class="hero">
-{{- with resources.Get "images/profile.jpg" }}
+{{- with resources.Get "images/profile-color.jpg" }}
 {{- $img := .Resize "320x q85" }}
-<img class="avatar" src="{{ $img.RelPermalink }}" width="160" height="160" alt="{{ $.Title }}">
+<img class="avatar avatar-light" src="{{ $img.RelPermalink }}" width="160" height="160" alt="{{ $.Title }}">
+{{- end }}
+{{- with resources.Get "images/profile-bw.jpg" }}
+{{- $img := .Resize "320x q85" }}
+<img class="avatar avatar-dark" src="{{ $img.RelPermalink }}" width="160" height="160" alt="" aria-hidden="true">
 {{- end }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-</section>
-<section class="recent">
-<h2>Recent Posts</h2>
-<ul class="postlist">
-{{- range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
-<li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span class="date">{{ .Date.Format "2 Jan 2006" }}</span></li>
-{{- end }}
-</ul>
-<p><a href="{{ "blog/" | relURL }}">See all posts</a></p>
 </section>
 {{- with site.GetPage "/publications" }}
 {{- with hugo.Data.publications }}
@@ -29,4 +24,13 @@
 </section>
 {{- end }}
 {{- end }}
+<section class="recent">
+<h2>Recent Posts</h2>
+<ul class="postlist">
+{{- range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span class="date">{{ .Date.Format "2 Jan 2006" }}</span></li>
+{{- end }}
+</ul>
+<p><a href="{{ "blog/" | relURL }}">See all posts</a></p>
+</section>
 {{ end }}

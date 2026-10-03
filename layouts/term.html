@@ -1,7 +1,7 @@
 {{ define "main" }}
-<ul>
+<ul class="entries">
 {{- range .Pages.ByDate.Reverse }}
-<li>{{ .Date.Format "2006-01-02" }} &ndash; <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<li><span class="date">{{ .Date.Format "2006-01-02" }}</span><span class="sep"> &ndash; </span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{- end }}
 </ul>
 {{ end }}

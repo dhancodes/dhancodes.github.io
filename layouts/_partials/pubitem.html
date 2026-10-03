@@ -2,13 +2,20 @@
 {{- $html := cond (ne .html nil) (printf "papers/%s" .html | relURL) "" -}}
 {{- $link := cond (ne .link nil) (.link | relURL) "" -}}
 {{- $href := or $pdf $html $link -}}
-{{- $parts := slice -}}
-{{- with .venue }}{{ $parts = $parts | append (. | htmlEscape) }}{{ end -}}
-{{- with $pdf }}{{ $parts = $parts | append (printf `<a href="%s">PDF</a>` .) }}{{ end -}}
-{{- with $html }}{{ $parts = $parts | append (printf `<a href="%s">HTML</a>` .) }}{{ end -}}
-{{- with $link }}{{ $parts = $parts | append (printf `<a href="%s">Link</a>` .) }}{{ end -}}
+{{- $svg := `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">%s</svg>` -}}
+{{- $ipdf := printf $svg `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8M8 9h2"/>` -}}
+{{- $ihtml := printf $svg `<path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/>` -}}
+{{- $ilink := printf $svg `<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/>` -}}
+{{- $icons := slice -}}
+{{- with $pdf }}{{ $icons = $icons | append (printf `<a href="%s" aria-label="PDF" title="PDF">%s</a>` . $ipdf) }}{{ end -}}
+{{- with $html }}{{ $icons = $icons | append (printf `<a href="%s" aria-label="HTML" title="HTML">%s</a>` . $ihtml) }}{{ end -}}
+{{- with $link }}{{ $icons = $icons | append (printf `<a href="%s" aria-label="Link" title="Link">%s</a>` . $ilink) }}{{ end -}}
 <li><span>
 {{- if $href }}<a href="{{ $href }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
 {{- with .authors }}<br><span class="meta">{{ . }}</span>{{ end }}
-{{- with $parts }}<br><span class="meta">{{ delimit . " &middot; " | safeHTML }}</span>{{ end -}}
-</span>{{ with .year }}<span class="date">{{ . }}</span>{{ end }}</li>
+{{- with .venue }}<br><span class="meta">{{ . }}</span>{{ end }}
+</span>
+{{- if or .year $icons }}<span class="pubside">
+{{- with .year }}<span class="date">{{ . }}</span>{{ end }}
+{{- with $icons }}<span class="pubicons">{{ delimit . "" | safeHTML }}</span>{{ end -}}
+</span>{{ end }}</li>
