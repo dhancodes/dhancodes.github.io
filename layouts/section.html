@@ -6,7 +6,7 @@
 {{- $seen = merge $seen (dict $p.RelPermalink $p.File.Path) }}
 {{- end }}
 {{ range .Pages.GroupByDate "2006" }}
-<h2>{{ .Key }}</h2>
+<h2 class="year">{{ .Key }}</h2>
 <ul class="entries">
 {{- range .Pages }}
 <li><span class="date">{{ .Date.Format "2006-01-02" }}</span><span class="sep"> &ndash; </span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

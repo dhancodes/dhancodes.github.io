@@ -570,8 +570,34 @@ body.s-blog main img {
     .entries a {
         text-decoration: none;
     }
+
+    .entries li {
+        border-top: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .entries li:last-child {
+        border-bottom: none;
+    }
 }
 
 .hero p:first-of-type a {
     color: inherit;
+}
+
+@media (max-width: 48em) {
+    .year {
+        margin-bottom: 0;
+        padding-top: 0.8em;
+        border-top: 1px solid var(--border);
+    }
+
+    .entries li:first-child {
+        border-top: none;
+    }
+
+    h1 + .year {
+        border-top: none;
+        padding-top: 0;
+    }
 }
