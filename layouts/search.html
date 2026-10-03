@@ -1,0 +1,5 @@
+{{ define "main" }}
+<input id="page-search" class="page-search" type="search" placeholder="Search posts and papers" aria-label="Search" autocomplete="off" autofocus data-index="{{ "searchindex.json" | relURL }}">
+<div id="page-results" class="sr-list"></div>
+<script>initSearch(document.getElementById("page-search"), document.getElementById("page-results"), 30, false);</script>
+{{ end }}
