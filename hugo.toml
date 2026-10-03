@@ -6,7 +6,7 @@ title = "Blog"
 tag = "tags"
 
 [outputs]
-home = ["html", "rss"]
+home = ["html", "rss", "searchindex"]
 
 [services.rss]
 limit = -1
@@ -69,3 +69,10 @@ inline = [["$", "$"], ["\\(", "\\)"]]
 # URL is /blog/title/ (taken from the filename, not the front-matter title).
 [frontmatter]
   date = [":filename", ":default"]
+
+# Client-side search: /searchindex.json is built from posts and papers.
+[outputFormats.searchindex]
+  baseName = "searchindex"
+  mediaType = "application/json"
+  isPlainText = true
+  notAlternative = true

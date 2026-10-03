@@ -1,0 +1,10 @@
+{{- $items := slice -}}
+{{- range where site.RegularPages "Section" "blog" -}}
+{{- $items = $items | append (dict "title" .Title "url" .RelPermalink "meta" (.Date.Format "2 Jan 2006") "tags" (.Params.tags | default slice) "text" (.Plain | truncate 8000)) -}}
+{{- end -}}
+{{- range hugo.Data.publications -}}
+{{- $href := "" -}}
+{{- if .pdf }}{{ $href = printf "papers/%s" .pdf | relURL }}{{ else if .html }}{{ $href = printf "papers/%s" .html | relURL }}{{ else if .link }}{{ $href = .link }}{{ else }}{{ $href = "publications/" | relURL }}{{ end -}}
+{{- $items = $items | append (dict "title" .title "url" $href "meta" (printf "Publication%s" (cond (ne .year nil) (printf ", %v" .year) "")) "tags" slice "text" (printf "%s %s" (.authors | default "") (.venue | default ""))) -}}
+{{- end -}}
+{{- $items | jsonify -}}
