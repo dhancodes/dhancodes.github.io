@@ -2,7 +2,6 @@
 title: "Organize Your Files Automatically: A Bash Script Based on Creation Date"
 tags:
   - bash
-  - organisation
 aliases:
   - /posts/2021/09/classifydate/
 ---

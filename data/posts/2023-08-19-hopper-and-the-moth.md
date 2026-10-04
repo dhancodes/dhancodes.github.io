@@ -1,7 +1,7 @@
 ---
 title: "Hopper and the Moth: How a Tiny Insect Taught Computers to Behave"
 tags:
-  - History
+  - Explainer
 toc: true
 aliases:
   - /posts/2023/08/19/Hopper_and_the_Moth/

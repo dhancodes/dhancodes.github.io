@@ -1,7 +1,7 @@
 ---
 title: 3 Ways to Be Better at Shell Scripting
 tags:
-  - Workflow
+  - Productivity
   - bash
 toc: true
 aliases:

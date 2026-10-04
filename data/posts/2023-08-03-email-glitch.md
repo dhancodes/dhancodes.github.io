@@ -1,7 +1,7 @@
 ---
 title: "Mastering Gmail: Unveiling the Infinite Gmail Glitch"
 tags:
-  - gmail
+  - Productivity
 toc: true
 aliases:
   - /posts/2023/08/03/email_glitch/

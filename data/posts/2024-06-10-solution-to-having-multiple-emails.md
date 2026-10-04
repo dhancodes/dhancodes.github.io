@@ -1,7 +1,7 @@
 ---
 title: "Managing Multiple Email Addresses: A Solution"
 tags:
-  - email
+  - Productivity
 toc: true
 aliases:
   - /posts/2024/06/10/solution_to_having_multiple_emails/

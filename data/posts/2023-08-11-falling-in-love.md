@@ -1,7 +1,8 @@
 ---
 title: "Falling in Love with Vim: A Journey of Workflow Optimization"
 tags:
-  - Vim
+  - Productivity
+  - vim
 toc: true
 aliases:
   - /posts/2023/08/11/falling_in_love/

@@ -1,7 +1,7 @@
 ---
 title: "Typography Tales: The Curious case of lorem ipsum!"
 tags:
-  - Origins
+  - Explainer
 toc: true
 aliases:
   - /posts/2023/07/20/lorem_ipsum/

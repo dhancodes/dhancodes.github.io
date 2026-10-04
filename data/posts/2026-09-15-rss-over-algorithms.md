@@ -1,8 +1,8 @@
 ---
 title: RSS Over Algorithms
 tags:
-  - rss
-  - health
+  - Productivity
+  - RSS
 toc: true
 aliases:
   - /posts/2026/09/15/rss_over_algorithms/

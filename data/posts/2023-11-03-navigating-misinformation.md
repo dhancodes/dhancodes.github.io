@@ -1,7 +1,7 @@
 ---
 title: "Navigating Misinformation: A Digital Survival Guide"
 tags:
-  -
+  - Productivity
 toc: true
 aliases:
   - /posts/2023/11/03/Navigating_Misinformation/

@@ -1,7 +1,7 @@
 ---
 title: "Growing Code: Lessons from the Garden and 'The Pragmatic Programmer'"
 tags:
-  - Programming
+  - Explainer
 toc: true
 aliases:
   - /posts/2023/09/02/growing-code/

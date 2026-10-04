@@ -1,7 +1,8 @@
 ---
 title: "Exploring Fediverse: An Alternative to Centralized Social Media"
 tags:
-  - Open Source
+  - FOSS
+  - Explainer
 toc: true
 aliases:
   - /posts/2023/07/06/Fediverse/

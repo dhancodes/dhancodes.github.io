@@ -1,8 +1,8 @@
 ---
 title: Ode to the terminal
 tags:
-  - Poem
-toc: true
+  - poem
+toc: false
 aliases:
   - /posts/2023/09/11/ode_to_the_terminal/
 ---

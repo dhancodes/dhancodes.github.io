@@ -1,7 +1,8 @@
 ---
 title: "Mastering LaTeX: Three Tips for Efficient Typesetting"
 tags:
-  - LaTeX
+  - Productivity
+  - latex
 toc: true
 aliases:
   - /posts/2023/07/31/mastering-latex/

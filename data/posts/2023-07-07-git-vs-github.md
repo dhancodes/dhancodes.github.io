@@ -1,9 +1,7 @@
 ---
 title: "Embracing Freedom: Git vs GitHub in the Microsoft Era"
 tags:
-  - github
-  - workflow
-  - commandline
+  - Explainer
 toc: true
 aliases:
   - /posts/2023/07/07/git_vs_github/

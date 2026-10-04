@@ -1,8 +1,7 @@
 ---
 title: A update on my markdown workflow
 tags:
-  - markdown
-  - pdfs
+  - Productivity
 toc: true
 aliases:
   - /posts/2026/09/14/_A_update_on_my_markdown_workflow/

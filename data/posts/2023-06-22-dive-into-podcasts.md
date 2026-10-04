@@ -1,7 +1,8 @@
 ---
 title: "Dive into Podcasts: Your Audio Escape from Algorithms"
 tags:
-  - podcasts
+  - Freedom
+  - Podcasts
 toc: true
 aliases:
   - /posts/2023/06/22/dive_into_podcasts/

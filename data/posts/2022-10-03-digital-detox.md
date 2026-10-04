@@ -1,9 +1,7 @@
 ---
 title: "My Digital Detox Journey: The Beginning"
 tags:
-  - Social Media
-  - Free
-  - Digital Detox
+  - Productivity
 toc: false
 aliases:
   - /posts/2022/10/03/digital_detox/

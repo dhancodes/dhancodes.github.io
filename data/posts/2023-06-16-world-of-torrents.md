@@ -1,7 +1,7 @@
 ---
 title: "Exploring the World of Torrents: Why Choose Torrenting?"
 tags:
-  - Workflow
+  - Freedom
 toc: true
 aliases:
   - /posts/2023/06/22/world_of_torrents/

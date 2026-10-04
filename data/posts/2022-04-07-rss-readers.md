@@ -2,7 +2,7 @@
 title: "Rediscovering the Internet: Navigating with RSS"
 tags:
  - Freedom
- - rss
+ - RSS
 toc: true
 aliases:
   - /posts/2022/04/rss-readers/

@@ -1,7 +1,8 @@
 ---
 title: "Google Alerts: Your Personalized Information Radar"
 tags:
-  -
+  - Freedom
+  - Productivity
 toc: false
 aliases:
   - /posts/2023/07/01/google_alerts/

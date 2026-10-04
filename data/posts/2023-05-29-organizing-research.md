@@ -1,7 +1,7 @@
 ---
 title: "Streamlining Research Workflow: Organizing Papers and eBooks"
 tags:
-  - Workflow
+  - Productivity
   - Bash
 toc: true
 aliases:
